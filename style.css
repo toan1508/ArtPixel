@@ -1,0 +1,127 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Fira Code;
+}
+
+body {
+  background: linear-gradient(#ddf7ff, #399ab8, #0e2f30);
+  min-height: 100vh;
+}
+
+.wrapper {
+  background-color: #fff;
+  width: 80vmin;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 40px 20px;
+  border-radius: 8px;
+}
+
+label {
+  display: block;
+}
+
+span {
+  position: relative;
+  font-size: 22px;
+  bottom: -1px;
+}
+
+.opt-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+button {
+  background-color: #6ec4df;
+  border: none;
+  border-radius: 7px;
+  padding: 8px 12px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1em;
+  min-width: 80px;
+  white-space: nowrap;
+}
+
+input[type="color"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  width: 60px;
+  height: 36px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border-radius: 8px;
+  border: 2.5px solid #000;
+}
+input[type="color"]::-moz-color-swatch {
+  border-radius: 8px;
+  border: 2.5px solid #000;
+}
+
+.gridCol {
+  height: 1em;
+  width: 1em;
+  border: 1px solid #ddd;
+}
+
+.gridRow {
+  display: flex;
+}
+
+#save-image {
+  font-size: 20px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 10px;
+  background: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .opt-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  button,
+  input[type="color"] {
+    flex: 1 1 45%;
+    min-width: 80px;
+    font-size: 0.85em;
+    padding: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+  }
+
+  label {
+    font-size: 14px;
+    word-break: break-word;
+  }
+
+  .wrapper {
+    width: 95vw;
+    padding: 20px 10px;
+  }
+
+  span {
+    font-size: 18px;
+  }
+}
